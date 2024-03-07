@@ -29,7 +29,16 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contact = new Contact();
+        $contact->last_name = $request->last_name;
+        $contact->first_name = $request->first_name;
+        $contact->phone_number = $request->phone_number;
+        $contact->email = $request->email;
+        $contact->date_of_birth = $request->date_of_birth;
+
+        $contact->save();
+
+        return redirect("/contacts");
     }
 
     /**

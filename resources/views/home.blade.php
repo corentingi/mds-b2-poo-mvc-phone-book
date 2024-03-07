@@ -8,5 +8,9 @@
     </head>
     <body class="antialiased">
         <h1>Bienvenue sur mon répertoire.</h1>
+
+        <p>
+            <a href="/contacts">List de contacts</a>
+        </p>
     </body>
 </html>

@@ -19,6 +19,13 @@
             <td>{{ $contact->email }}</td>
             <td>{{ $contact->date_of_birth->format("d/m/Y") }}</td>
             <td>{{ $contact->date_of_birth->age }}</td>
+            <td>
+                <form method="POST" action="/contacts/{{ $contact->id }}">
+                    @csrf
+                    @method('DELETE')
+                    <button type=submit>Supprimer</button>
+                </form>
+            </td>
         </tr>
         @endforeach
     </table>

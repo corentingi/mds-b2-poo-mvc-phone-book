@@ -13,7 +13,11 @@
 
         @foreach ($contacts as $contact)
         <tr>
-            <td>{{ $contact->last_name }}</td>
+            <td>
+                <a href="/contacts/{{ $contact->id }}">
+                    {{ $contact->last_name }}
+                </a>
+            </td>
             <td>{{ $contact->first_name }}</td>
             <td>{{ $contact->phone_number }}</td>
             <td>{{ $contact->email }}</td>
@@ -25,6 +29,11 @@
                     @method('DELETE')
                     <button type=submit>Supprimer</button>
                 </form>
+            </td>
+            <td>
+                <a href="/contacts/{{ $contact->id }}">
+                    <button>Détails</button>
+                </a>
             </td>
         </tr>
         @endforeach
